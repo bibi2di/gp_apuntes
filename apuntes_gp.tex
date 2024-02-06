@@ -1,0 +1,174 @@
+\documentclass{article}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{Orange!15}
+\colorlet{LightGreen}{Green!15}
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\declaretheoremstyle[name=Definicion,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray}
+
+\declaretheoremstyle[name=Proposition,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{proposition}
+\tcolorboxenvironment{proposition}{colback=LightOrange}
+
+\declaretheoremstyle[name=Principle,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{principle}
+\tcolorboxenvironment{principle}{colback=LightGreen}
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Cover Page and ToC
+% ------------------------------------------------------------------------------
+
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{1.5pt} \\
+		\LARGE \textbf{\uppercase{Apuntes Gestión de Proyectos}
+		\HRule{2.0pt} \\ [0.6cm] \LARGE{} \vspace*{10\baselineskip}}
+		}
+\date{}
+\author{\textbf{Author} \\ 
+		B.L.B}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+% ------------------------------------------------------------------------------
+
+\section{Objetivos y alcance (06/02/2024)}
+
+Son elementos clave para definir y planificar el trabajo:
+\begin{itemize}
+	\item Objetivos (QUÉ): resultados esperados. ¿Qué queremos conseguir?
+	\item Alcance (CÓMO): ámbito de acción y requisitos que debe cumplir. ¿Qué hay que hacer para desarrollar el proyecto?
+\end{itemize}
+
+Deben estar alineados entre sí y con la misión del proyecto, y coherentes con los recursos y restricciones existentes. 
+
+\subsubsection{Definir objetivos}
+Pasos:
+\begin{itemize}
+	\item Identificar interesados: stakeholders
+	\item Identificar qué quiere cada interesado
+	\item Tener en cuenta solo los intereses convenientes para el proyecto. 
+\end{itemize}
+\subsubsection{Redactar objetivos}
+La redacción de los objetivos es única para todos los interesados.
+\begin{itemize}
+	\item Objetivos SMART: \textbf{específifos}, \textbf{medibles}, \textbf{alcanzables}, \textbf{relevantes}, \textbf{temporales} (se utilizan verbos para redactarlos)
+	\item Objetivos \textbf{generales} y \textbf{específicos}:
+	\begin{itemize}
+		\item Generales: declaraciones claras y concisas de los propósitos del proyecto.
+		\item Específicos: se definen las metas a corto plazo que deben cumplirse para lograr el objetivo general de forma más detallada.
+	\end{itemize}
+	\item Errores típicos:
+	\begin{itemize}
+		\item Dividir los objetivos por interesados.
+		\item Confundir tareas con objetivos.
+		\item Definir objetivos poco realistas o inalcanzables.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Alcance}
+
+Una vez definidos los objetivos, hay que definir qué pasos dar para cumplirlos.
+\begin{itemize}
+	\item El alcance debe ser claro, completo y consensuado con las partes interesadas
+	\item Alcance del producto: características y funcionalidades del producto final: Documento de requisitos.
+	\item Alcance del proyecto: tareas que se llevarán a cabo para conseguir el producto: Estructura de Descomposición del Trabajo (EDT).
+\end{itemize}
+
+\subsubsection{Redactar alcance}
+\begin{itemize}
+	\item Ver qué tareas son necesarias para conseguir los objetivos
+	\item Dividir las tareas en subtareas más fáciles de estimar y asignar al personal.
+	\item Las tareas se incluyen en una estructura jerárquica llamada \textbf{EDT}.
+\end{itemize}
+
+\subsubsection{EDT}
+\begin{itemize}
+	\item Nivel 1: Proyecto
+	\item Nivel 2: Fases, Paquetes de trabajo: INICIO, DISEÑO, IMPLEMENTACIÓN, PRUEBAS, GESTIÓN
+	\item Nivel 3: Paquetes de trabajo, tareas que cuelgan del nivel 2.
+	\item Nivel 4: Paquetes de trabajo, subtareas que cuelgan del nivel 3.
+\end{itemize}
+Todas las tareas del EDT forman el alcance del proyecto, y lo que no está en el EDT no es parte del proyecto (todo debe estar definido aquí). 
+Gestionar el proyecto (el seguimiento y supervisión) debe estar incluído, al fin y al cabo es tiempo invertido en el proyecto. 
+
+Se pueden establecer una serie de entregas intermedias (entregables): para el cliente (presupuestos, prototipos...) o para el equipo de trabajo (DOP, análisis...) que ayudan a establecer hitos o fechas clave. 
+
+Entregables:
+\begin{itemize}
+	\item DOP: una vez finalizada la tarea "Elaboración del DOP".
+	\item Presupuesto: una vez finalizada la tarea "Organización".
+	\item Resultados de los tests.
+\end{itemize}
+
+Por cada tarea definida, hay que rellenar la hoja de descripción con \textbf{responsable}, \textbf{esfuerzo}, \textbf{duración}, \textbf{recursos}, \textbf{descripción}...
+
+Errores típicos:
+\begin{itemize}
+	\item Añadir requisitos del producto final.
+	\item No se realizan tareas una vez alcanzado el objetivo final.
+	\item Desglose poco específico.
+\end{itemize}
+
+\subsubsection{Ejercicios (examen)*}
+En el documento word.
+
+%\begin{proposition}
+%    This is a proposition.
+%\end{proposition}
+
+%\begin{principle}
+ %   This is a principle.
+%\end{principle}
+
+% Maybe I need to add one more part: Examples.
+% Set style and colour later.
+
+
+\newpage
+
+% ------------------------------------------------------------------------------
+% Reference and Cited Works
+% ------------------------------------------------------------------------------
+
+\bibliographystyle{IEEEtran}
+\bibliography{References.bib}
+
+% ------------------------------------------------------------------------------
+
+\end{document}
