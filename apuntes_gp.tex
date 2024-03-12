@@ -453,6 +453,34 @@ Métodos para la estimación:
 	\end{enumerate}
 \end{itemize}
 
+\section{Evaluación económica}
+\subsection{Estudio financiero}
+Tenemos en cuenta la rentabilidad y el coste del proyecto. 
+\begin{itemize}
+	\item Plazo de recuperación simple
+	\item Rendimiento de inversión (ROI):
+	\begin{math}
+	\sum_{j=1}^{n} \frac{Qj - K}{n * K}*100
+	\end{math}
+\end{itemize}
+
+\subsection{El valor del dinero}
+Para actualizar el valor del dinero se usan estas fórmulas:\\
+\begin{math}
+Futuro = Actual * (1+i)^n\\
+Actual = Futuro * (1+i)^{-n}
+\end{math}
+
+Ejemplo: IPC (incremento precios de consumo)
+
+TIR: \begin{math} K=\sum_{j=1}^{n} \frac{Q_j}{(1+r)^j}\end{math}
+\\
+Son viables los proyectos con r $>$ tipo de interés. Cuanto mayor la r, mejor la inversión.\\
+El VAN representa la ganancia neta. Si el VAN es mayor que cero, el proyecto es viable.
+\begin{math}
+VAN = -K + \sum_{j=1}^{n} \frac{Q_j}{(1+r)^j}
+\end{math}
+
 %\begin{proposition}
 %    This is a proposition.
 %\end{proposition}
@@ -463,6 +491,7 @@ Métodos para la estimación:
 
 % Maybe I need to add one more part: Examples.
 % Set style and colour later.
+
 
 
 \newpage
